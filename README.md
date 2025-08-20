@@ -82,6 +82,25 @@ tree_gini.png      # Decision tree using Gini Index
 
 Both trees will be saved in the working directory and usually open automatically.
 
+Sure! Here’s the input part formatted as a table that you can directly paste into your README:
+
+## 📊 Example Input Data
+
+Here is an example of the input dataset used in the project:
+
+| Weekend | Weather | Parents | Financial Condition | Decision     |
+|---------|---------|---------|---------------------|--------------|
+| W1      | Sunny   | Yes     | Rich                | Cinema       |
+| W2      | Sunny   | No      | Rich                | Play Tennis  |
+| W3      | Windy   | Yes     | Rich                | Cinema       |
+| W4      | Rainy   | Yes     | Poor                | Cinema       |
+| W5      | Rainy   | No      | Rich                | Stay in      |
+| W6      | Rainy   | Yes     | Poor                | Cinema       |
+| W7      | Windy   | No      | Poor                | Cinema       |
+| W8      | Windy   | No      | Rich                | Shopping     |
+| W9      | Windy   | Yes     | Rich                | Cinema       |
+| W10     | Sunny   | No      | Rich                | Play Tennis  |
+
 
 ## 🔍 Example Output
 
