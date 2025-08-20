@@ -2,7 +2,6 @@
 
 A Python-based implementation of **Decision Trees** built from scratch, complete with **Entropy (Information Gain)** and **Gini Index** as splitting criteria. The project also includes a **Graphviz-powered visualizer** to generate crisp, interpretable tree diagrams.  
 
----
 
 ## 🚀 Features  
 - **Custom Entropy & Gini Functions** – Implemented from scratch, no external ML libraries.  
@@ -13,7 +12,6 @@ A Python-based implementation of **Decision Trees** built from scratch, complete
 - **Interactive Visualizations** – Trees are exported as PNGs with Graphviz.  
 - **Human-readable structure** – Leaf nodes represent final decisions, internal nodes show feature splits.  
 
----
 
 ## 📂 Project Structure  
 ```bash
@@ -25,7 +23,6 @@ DecisionTreeVisualizer/
 │── README.md            # You are here
 ```
 
----
 
 ## ⚙️ How It Works
 
@@ -43,7 +40,6 @@ DecisionTreeVisualizer/
 4. **Visualization**  
    - Uses **Graphviz (Digraph)** to generate interpretable flowchart-like trees.  
 
----
 
 ## 🛠 Installation  
 
@@ -68,7 +64,6 @@ brew install graphviz
 ### Windows
 Download from [Graphviz.org](https://graphviz.gitlab.io/download/) and add it to your PATH.
 
----
 
 ## 📊 Usage
 
@@ -87,7 +82,6 @@ tree_gini.png      # Decision tree using Gini Index
 
 Both trees will be saved in the working directory and usually open automatically.
 
----
 
 ## 🔍 Example Output
 
@@ -107,5 +101,3 @@ Both trees will be saved in the working directory and usually open automatically
     <img width="535" height="413" alt="Gini Tree" src="https://github.com/user-attachments/assets/eed20ab2-cf13-4bf6-be7c-316271f04a21" />
 </div>
 
-
----
