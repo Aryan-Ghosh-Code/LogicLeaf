@@ -1,56 +1,111 @@
-# DeciVision
-A Python-powered decision tree builder and visualizer that explores attribute selection using Entropy (ID3 style) and Gini Index (CART style). Features include: custom metric calculation (using Information Gain and Gini Index), recursive tree construction, and Graphviz-based visualization for intuitive interpretation of decision boundaries.
+# 🌳 DeciVision: Decision Tree Visualizer  
 
-🚀 Features
+A Python-based implementation of **Decision Trees** built from scratch, complete with **Entropy (Information Gain)** and **Gini Index** as splitting criteria. The project also includes a **Graphviz-powered visualizer** to generate crisp, interpretable tree diagrams.  
 
-Build decision trees using Entropy (ID3-style) or Gini Impurity (CART-style).
+---
 
-Custom implementation of metric calculations (no black-box libraries).
+## 🚀 Features  
+- **Custom Entropy & Gini Functions** – Implemented from scratch, no external ML libraries.  
+- **Dynamic Tree Builder** – Recursively constructs decision trees using chosen impurity measures.  
+- **Dual Criteria Support**  
+  - *Entropy (Information Gain)* → ID3-style splitting  
+  - *Gini Index* → CART-style splitting  
+- **Interactive Visualizations** – Trees are exported as PNGs with Graphviz.  
+- **Human-readable structure** – Leaf nodes represent final decisions, internal nodes show feature splits.  
 
-Recursive tree construction for clean, interpretable results.
+---
 
-Graphviz-powered visualization for elegant branching diagrams.
+## 📂 Project Structure  
+```bash
+DecisionTreeVisualizer/
+│── weekend.csv          # Input dataset
+│── decision_tree.py     # Main script with tree logic + visualization
+│── tree_entropy.png     # Tree built using entropy
+│── tree_gini.png        # Tree built using gini index
+│── README.md            # You are here
+```
 
-Modular and extensible design to experiment with datasets and metrics.
+---
 
-📦 Installation
+## ⚙️ How It Works
 
-Clone this repository and install the dependencies:
+1. **Entropy & Gini Calculation**  
+   - Computes uncertainty of class labels.  
+   - Lower impurity ⇒ better split.  
 
-git clone https://github.com/your-username/BranchCraft.git
-cd BranchCraft
-pip install -r requirements.txt
+2. **Attribute Selection**  
+   - Recursively selects the best feature based on chosen metric (*Entropy* or *Gini*).  
 
-🛠️ Usage
+3. **Tree Construction**  
+   - Splits dataset into subsets by feature values.  
+   - Continues until pure leaves or no features remain.  
 
-Run the main script with your dataset:
+4. **Visualization**  
+   - Uses **Graphviz (Digraph)** to generate interpretable flowchart-like trees.  
 
-python main.py
+---
+
+## 🛠 Installation  
+
+Install the required Python libraries:  
+
+```bash
+pip install pandas numpy graphviz
+```
+
+Also, install the Graphviz system package (needed for rendering images):
+
+### Debian/Ubuntu
+```bash
+sudo apt-get update && sudo apt-get install -y graphviz
+```
+
+### macOS (Homebrew)
+```bash
+brew install graphviz
+```
+
+### Windows
+Download from [Graphviz.org](https://graphviz.gitlab.io/download/) and add it to your PATH.
+
+---
+
+## 📊 Usage
+
+Run the script with your dataset (weekend.csv as default):
+
+```bash
+python decision_tree.py
+```
+
+This will generate:
+
+```bash
+tree_entropy.png   # Decision tree using Information Gain
+tree_gini.png      # Decision tree using Gini Index
+```
+
+Both trees will be saved in the working directory and usually open automatically.
+
+---
+
+## 🔍 Example Output
+
+- 🟦 **Feature Nodes** → Light-blue rounded boxes
+- 🟩 **Leaf Nodes** → Green ellipses (final decision)
+
+📌 **Entropy-based trees maximize information gain**  
+
+<div align="center">
+    <img width="894" height="413" alt="Entropy Tree" src="https://github.com/user-attachments/assets/2fb095ba-5a25-457c-b449-bcb756c3da0c" />
+</div>
 
 
-This will:
+📌 **Gini-based trees minimize class impurity**
 
-Calculate attribute selection measures (Entropy/Gini).
-
-Construct a decision tree recursively.
-
-Output a Graphviz .dot file and rendered visualization (.png/.pdf).
-
-📊 Example Output
-
-A decision tree built with Entropy might look like:
-
-            [Feature X?]
-            /          \
-        yes/            \no
-       Leaf A         [Feature Y?]
-                      /          \
-                  yes/            \no
-                Leaf B           Leaf C
+<div align="center">
+    <img width="535" height="413" alt="Gini Tree" src="https://github.com/user-attachments/assets/eed20ab2-cf13-4bf6-be7c-316271f04a21" />
+</div>
 
 
-And with Graphviz, it becomes an elegant branching diagram.
-
-🔍 Why BranchCraft?
-
-Instead of hiding complexity, BranchCraft exposes the mathematical underpinnings of decision trees — showing exactly how Entropy and Gini drive the branching process. It’s not just a tool; it’s a learning companion for students, researchers, and developers exploring interpretable machine learning.
+---
