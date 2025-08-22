@@ -1,0 +1,19 @@
+digraph {
+	rankdir=TB splines=polyline
+	node [fontname=Helvetica]
+	node13 [label=Parents color=lightblue shape=box style="rounded,filled"]
+	node14 [label=Cinema color=lightgreen shape=ellipse style=filled]
+	node13 -> node14 [label=Yes]
+	node15 [label=Weather color=lightblue shape=box style="rounded,filled"]
+	node13 -> node15 [label=No]
+	node16 [label="Play Tennis" color=lightgreen shape=ellipse style=filled]
+	node15 -> node16 [label=Sunny]
+	node17 [label="Stay in" color=lightgreen shape=ellipse style=filled]
+	node15 -> node17 [label=Rainy]
+	node18 [label="Financial Condition" color=lightblue shape=box style="rounded,filled"]
+	node15 -> node18 [label=Windy]
+	node19 [label=Cinema color=lightgreen shape=ellipse style=filled]
+	node18 -> node19 [label=Poor]
+	node20 [label=Shopping color=lightgreen shape=ellipse style=filled]
+	node18 -> node20 [label=Rich]
+}
