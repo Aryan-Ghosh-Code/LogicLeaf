@@ -83,23 +83,17 @@ test_instance_row = data.iloc[random_index]
 test_instance = test_instance_row[features].to_dict()
 true_decision = test_instance_row[target]
 
-# print("\n--- Random Test Instance ---")
-# print(f"Row index: {random_index}")
-# for feature, value in test_instance.items():
-#     print(f"  {feature}: {value}")
-# print(f"  True Decision: {true_decision}")
+print("\n--- Random Test Instance ---")
+print(f"Row index: {random_index}")
+for feature, value in test_instance.items():
+    print(f"  {feature}: {value}")
+print(f"  True Decision: {true_decision}")
 
-# # ------------------ Prediction ------------------
-# prediction = predict_naive_bayes_verbose(model, features, test_instance)
+# ------------------ Prediction ------------------
+prediction = predict_naive_bayes_verbose(model, features, test_instance)
 
-# print("\n--- Final Prediction ---")
-# for feature, value in test_instance.items():
-#     print(f"  {feature}: {value}")
-# print(f"Predicted Decision: {prediction}")
-# print(f"Actual Decision: {true_decision}")
-
-test_instance = {'Weather': 'Sunny', 'Parents': 'No', 'Financial Condition': 'Rich'} # Test instance 
-prediction = predict_naive_bayes_verbose(model, features, test_instance) 
-print("\n--- Final Prediction --") 
-print(f"Test Instance: {test_instance}") 
+print("\n--- Final Prediction ---")
+for feature, value in test_instance.items():
+    print(f"  {feature}: {value}")
 print(f"Predicted Decision: {prediction}")
+print(f"Actual Decision: {true_decision}")
