@@ -2,10 +2,10 @@ import pandas as pd
 import random
 from collections import defaultdict
 
-data = pd.read_csv("data.csv")
+data = pd.read_csv("data_3.csv")
 
 features = list(data.columns[1:-1])  # exclude Weekend ID column
-target = "Decision"
+target = "Class Label" #see the dataset and name this as the last column in the datatset
 
 def train_naive_bayes(df, features, target): #Training Functio
     model = {
@@ -27,7 +27,7 @@ def train_naive_bayes(df, features, target): #Training Functio
             value_counts = subset[feature].value_counts()
             total_in_class = len(subset)
             unique_values = df[feature].nunique()
-            
+
             for value in df[feature].unique():
                 model["likelihoods"][feature][value][c] = (
                     (value_counts.get(value, 0) + 1) / (total_in_class + unique_values)
@@ -57,7 +57,6 @@ def predict_naive_bayes_verbose(model, features, instance):
     print("\nAfter Normalization\n")
     total = sum(posteriors.values())
     for c in posteriors:
-        print(posteriors[c], total)
         posteriors[c] /= total
         print(f"Posterior P({c} | features) = {posteriors[c]}")
     
