@@ -1,8 +1,3 @@
-# Hierarchical clustering (complete-link) on the provided 12 points.
-# This runs the clustering, prints the full merge sequence (clusters merged and distances),
-# shows the cluster "cover" after each merge, and draws a dendrogram using matplotlib.
-#
-# The output will be visible to you.
 from math import sqrt
 from itertools import combinations
 import matplotlib.pyplot as plt
