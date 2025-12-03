@@ -1,0 +1,15 @@
+Species Name,Body Temperature,Gives Birth,Aquatic Creature,Aerial Creature,Has Legs,Hibernates,Class Label
+Human,Warm,yes,no,no,yes,no,Mammal
+Python,Cold,no,no,no,no,yes,Reptile
+Whale,Warm,yes,yes,no,no,no,Mammal
+Frog,Cold,no,semi,no,yes,yes,Amphibian
+Komodo,Cold,no,no,no,yes,no,Reptile
+Bat,Warm,yes,no,yes,yes,yes,Mammal
+Pigeon,Warm,no,no,yes,yes,no,Bird
+Cat,Warm,yes,no,no,yes,no,Mammal
+Leopard,Cold,yes,yes,no,no,no,Fish
+Turtle,Cold,no,semi,no,yes,no,Reptile
+Penguin,Warm,no,semi,no,yes,no,Bird
+Porcupine,Warm,yes,no,no,yes,yes,Mammal
+Eel,Cold,no,yes,no,no,no,Fish
+Salamander,Cold,no,semi,no,yes,yes,Amphibian
